@@ -8,15 +8,12 @@ using namespace std;
 
  void ariel::Fraction::reduction(){
     int gcd = __gcd(this->numerator, this->denominator); 
-
     this->numerator = this->numerator / gcd;
     this->denominator = this->denominator / gcd;
-
     if (this->denominator < 0 && this->numerator > 0) {this->numerator *= -1; this->denominator *= -1;  }
 }
 
-namespace ariel
-{
+namespace ariel{
 
     Fraction::Fraction() : numerator(0), denominator(1) {} 
     Fraction::Fraction(float number) : Fraction(1000 * number, 1000) {} 
